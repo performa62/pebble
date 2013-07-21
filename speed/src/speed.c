@@ -120,7 +120,7 @@ void hour_display_layer_update_callback(Layer *me, GContext* ctx) {
 
   get_time(&t);
 
-  unsigned int angle = t.tm_hour * 30 + t.tm_min / 2;
+  unsigned int angle = t.tm_hour * 30 + t.tm_min / 4;
   gpath_rotate_to(&hour_hand_path, (TRIG_MAX_ANGLE / 360) * angle);
 
   graphics_context_set_fill_color(ctx, GColorWhite);
